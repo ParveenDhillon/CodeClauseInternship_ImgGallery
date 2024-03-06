@@ -1,0 +1,126 @@
+body{
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+img{
+    width: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.mygallry{
+    width: 100%;
+    display: block;
+    min-height: 100vh;
+    background-color: #000000;
+    padding: 100px 0;
+
+ }
+ 
+ .container{
+     max-width: 1170px;
+     margin:auto;
+ }
+ .mygallry .gallery-filter{
+    padding: 10px 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    background-image: linear-gradient(to bottom right, rgb(235, 42, 42), rgb(132, 229, 21));
+ }
+ .mygallry .gallery-filter .filter-item{
+    color: #ffffff;
+    font-size: 17px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 18px;
+    margin-right: 8px;
+    cursor: pointer;
+    padding: 8px 20px 8px 20px;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+ }
+ .mygallry .gallery-filter .filter-item.active{
+    color: white;
+    border-color : #166c8f;
+    background: #085486;
+  }
+.mygallry .gallery-filter .filter-item:hover{
+    background-color: rgb(202, 202, 191);
+    color: black;
+}
+.mygallry .gallery-item{
+    width: calc(100% / 3);
+    padding: 15px;
+
+}
+.mygallry .gallery-item-inner img{
+    width: 100%;
+  border: 3px solid #d4dad9;
+}
+.mygallry .gallery-item.show{
+    animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.mygallry .gallery-item.hide{
+    display: none;
+}
+@media(max-width: 491px){
+    .gallery .gallery-item{
+        width: 50%;
+    }
+}
+@media(max-width: 667px){
+    .gallery .gallery-item{
+        width: 100%;
+    }
+    .gallery .gallery-filter .filter-item{
+        margin-bottom: 10px;
+    }
+}
+.container2 {  
+    position: absolute;
+    top: 30px; 
+    right: 45%; 
+    width: 50%;  
+    max-width: 200px;  
+  }  
+    
+  .image {  
+    display: block;  
+    width: 100%;  
+    height: auto;  
+  }  
+    
+  .overlay {  
+    position: absolute;   
+    top: 130px;   
+    background: rgba(255, 255, 255, 0.2);   
+    width: 250px;  
+    opacity:0;
+    color: white;   
+    transition: .9s ease;  
+    font-size: 25px;  
+    padding: 5px;  
+  }  
+    
+  .container2:hover .overlay {  
+    opacity: 1.5;  
+  }  
